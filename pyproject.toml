@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "super-tradingagents-cn-skill"
+version = "0.1.0"
+description = "A股多Agent投研SKILL — 适配TRAE/Cursor/Claude Code/Cline/Windsurf的交互式投研助手"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "hutuboy", email = "hutuboy@users.noreply.github.com"},
+]
+keywords = [
+    "a-share", "stock", "trading", "investment-research",
+    "multi-agent", "llm", "skill", "cursor", "claude", "trae",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = [
+    "tradingagents-astock>=0.2.16",
+    "typer>=0.21.0",
+    "rich>=14.0.0",
+    "pandas>=2.3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/hutuboy/super-tradingagents-cn-skill"
+Repository = "https://github.com/hutuboy/super-tradingagents-cn-skill"
+Issues = "https://github.com/hutuboy/super-tradingagents-cn-skill/issues"
+Upstream = "https://github.com/simonlin1212/TradingAgents-astock"
+
+[project.scripts]
+stcs = "super_tradingagents_cn_skill.cli:main"
+super-tradingagents-cn-skill = "super_tradingagents_cn_skill.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["super_tradingagents_cn_skill*"]
+
+[tool.setuptools.package-data]
+super_tradingagents_cn_skill = ["assets/skills/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

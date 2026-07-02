@@ -1,8 +1,48 @@
 # Super TradingAgents CN — A股智能投研助手
 
 [![GitHub](https://img.shields.io/badge/GitHub-hutuboy/super--tradingagents--cn--skill-blue)](https://github.com/hutuboy/super-tradingagents-cn-skill)
+[![PyPI](https://img.shields.io/badge/PyPI-super--tradingagents--cn--skill-green)](https://pypi.org/project/super-tradingagents-cn-skill)
 
 A股多Agent投研分析框架，集成 **7 分析师 → 多空辩论 → 综合研判 → 交易方案 → 风控辩论 → 最终决策** 的完整决策链路。全部数据源免费直连，无需 API Key。
+
+## 安装
+
+```bash
+pip install super-tradingagents-cn-skill
+```
+
+依赖会自动安装 [tradingagents-astock](https://github.com/simonlin1212/TradingAgents-astock)（A股数据源与核心框架）。
+
+## CLI 快速使用
+
+```bash
+# 快速分析一只股票（轻量模式，无需 LLM Key）
+stcs analyze 002714
+
+# 深入分析
+stcs analyze 600519 --deep
+
+# 将 SKILL 安装到当前项目（支持 TRAE/Cursor/Claude/Cline/Windsurf）
+stcs skill install --platform all
+
+# 列出支持的平台
+stcs skill list
+
+# 启动 Web UI
+stcs web
+```
+
+## Python API
+
+```python
+from super_tradingagents_cn_skill import quick_analyze
+
+result = quick_analyze("002714", deep=True)
+print(result["signal"])      # HOLD
+print(result["position"])    # 40-60%
+print(result["avg_score"])   # 69.9
+print(result["report"])      # Markdown 格式完整报告
+```
 
 ## 多平台适配
 
