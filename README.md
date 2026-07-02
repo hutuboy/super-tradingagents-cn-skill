@@ -241,4 +241,47 @@ pip install -e . --no-build-isolation
 
 ## 免责声明
 
-本项目仅供学习研究与技术演示，不构成任何投资建议。投资决策请咨询持牌专业机构。
+**本项目仅供学习研究与技术演示，不构成任何投资建议。**
+
+- 所有分析结果、评分、信号和交易方案均基于公开数据通过规则引擎或 LLM 生成，不保证准确性和完整性
+- A 股市场具有高度波动性，历史数据不代表未来表现
+- 投资决策请咨询持牌专业机构，作者不对因使用本项目而产生的任何投资损失承担责任
+- 本项目中的数据工具仅调用公开 API，不获取、不存储任何非公开或内幕信息
+- 使用本项目即表示您已理解并接受上述风险声明
+
+---
+
+## 致谢
+
+本 SKILL 基于以下开源项目进行适配与改造：
+
+- **[TradingAgents-Astock](https://github.com/simonlin1212/TradingAgents-astock)** — A 股深度特化的多 Agent 投研框架，由 simonlin1212 开发并维护。本 SKILL 的核心数据源工具、7 分析师角色定义和决策链路架构均源自该项目。
+- **[TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents)** — 原版 TradingAgents 多 Agent LLM 金融交易框架，为本项目提供了基础架构和开源精神。
+
+感谢原作者的出色工作和 Apache 2.0 开源许可。
+
+原始论文：*TradingAgents: Multi-Agents LLM Financial Trading Framework*
+
+---
+
+## 许可证
+
+**Apache License 2.0**
+
+本项目是 [TradingAgents-Astock](https://github.com/simonlin1212/TradingAgents-astock) 的衍生 SKILL，继承 Apache 2.0 许可证。详见 [LICENSE](LICENSE) 文件。
+
+```
+Copyright 2026 hutuboy
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
